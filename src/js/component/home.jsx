@@ -2,25 +2,36 @@ import React from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+
+function Home(props) {
+  return (
+    <div className="container">
+      <h1 className="counter text-white border rounded border-white">
+        <AiOutlineClockCircle />
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 100000) % 10}
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 10000) % 10}
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 1000) % 10}
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 100) % 10}
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 10) % 10}
+      </h1>
+      <h1 className="counter text-white border rounded border-white">
+        {Math.floor(props.sec / 1) % 10}
+      </h1>
+    </div>
+  );
+}
 
 export default Home;

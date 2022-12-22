@@ -10,3 +10,22 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    width: 100vw;
+    height: 100vh;
+    background: gainsboro;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    background: black;
+    color: white;
+    width: 100%;
+    height: 150px;
+    font-size: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
